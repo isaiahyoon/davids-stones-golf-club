@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172720" />
+    <meta name="description" content="데이빗 스톤 골프 클럽 웹사이트 시안의 레슨 및 클럽 피팅 예시 요금입니다. 실제 요금은 원장님 확인 후 안내됩니다." />
+    <meta property="og:title" content="예시 이용 요금 | 데이빗 스톤 골프 클럽" />
+    <meta property="og:description" content="웹사이트 시안에 사용된 예시 요금입니다. 실제 요금은 확인이 필요합니다." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pricing.css" />
+    <title>예시 이용 요금 | 데이빗 스톤 골프 클럽</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+    <div class="draft-note">
+      <span class="draft-note__dot" aria-hidden="true"></span>
+      제안용 웹사이트 시안 <span aria-hidden="true">·</span> 아래 요금은 실제 요금이 아닌 예시입니다
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="데이빗 스톤 골프 클럽 홈">
+        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="20.5" stroke="currentColor" />
+          <path d="M13 29.5c5.4 0 8.6-2.7 11-8.5 2.4 5.8 5.6 8.5 11 8.5" stroke="currentColor" stroke-linecap="round" />
+          <path d="M24 13v15.5m0 0 5.2 7.5" stroke="currentColor" stroke-linecap="round" />
+          <circle cx="24" cy="12.5" r="2" fill="currentColor" />
+        </svg>
+        <span class="brand__wordmark">
+          <strong>데이빗 스톤 골프</strong>
+          <span>DAVID’S STONE GOLF CLUB</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+        <a href="approach.html">레슨 철학</a>
+        <a href="lessons.html">레슨 · 피팅</a>
+        <a href="pricing.html" aria-current="page">이용 요금</a>
+        <a href="visit.html">찾아오시는 길</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="pricing-hero" aria-labelledby="pricing-title">
+        <div class="section-shell pricing-hero__inner">
+          <div>
+            <p class="eyebrow eyebrow--light"><span></span> LESSONS &amp; CLUB FITTING</p>
+            <h1 class="section-title section-title--light" id="pricing-title">연습을 시작하기 전,<br /><em>요금부터 편하게.</em></h1>
+          </div>
+          <p class="pricing-hero__intro">레슨과 피팅을 알아보실 때<br />한눈에 살펴볼 수 있도록 준비했습니다.</p>
+        </div>
+      </section>
+
+      <section class="pricing section-shell" aria-labelledby="pricing-list-title">
+        <div class="pricing__heading">
+          <div>
+            <div class="section-kicker"><span>01</span> PRICING PREVIEW</div>
+            <h2 id="pricing-list-title">레슨 · 피팅 예시 요금</h2>
+          </div>
+          <span class="pricing__currency">USD · 미국 달러</span>
+        </div>
+
+        <div class="pricing-notice" role="note">
+          <strong>아래 금액은 시안용 예시입니다.</strong>
+          <p>실제 요금, 레슨 시간 및 피팅 범위는 아직 확인되지 않았습니다. 박명준 원장님과 확인 후 정확한 내용으로 변경할 예정입니다.</p>
+        </div>
+
+        <div class="pricing-cards">
+          <article class="pricing-card">
+            <span class="pricing-card__index">01 / LESSON</span>
+            <h3>골프 레슨</h3>
+            <p class="pricing-card__description">기본기와 스윙 메커니즘에 집중하는 레슨.</p>
+            <div class="pricing-card__amount">
+              <span>예시</span>
+              <strong>$80</strong>
+              <span> / 1회 · 60분</span>
+            </div>
+            <p class="pricing-card__note">금액과 시간은 시안용 예시이며, 실제 제공 내용과 다를 수 있습니다.</p>
+          </article>
+          <article class="pricing-card">
+            <span class="pricing-card__index">02 / FITTING</span>
+            <h3>맞춤 클럽 피팅</h3>
+            <p class="pricing-card__description">내 스윙에 맞는 클럽을 살펴보는 피팅.</p>
+            <div class="pricing-card__amount">
+              <span>예시</span>
+              <strong>$100</strong>
+              <span> / 1회</span>
+            </div>
+            <p class="pricing-card__note">금액과 피팅 범위, 클럽 및 부품 비용은 원장님 확인이 필요합니다.</p>
+          </article>
+        </div>
+
+        <div class="pricing-next">
+          <div>
+            <span class="section-kicker"><span>02</span> BEFORE YOUR VISIT</span>
+            <h2>정확한 안내는<br /><em>확인 후 전해드릴게요.</em></h2>
+            <p>실제 요금과 예약 방법은 원장님 확인 후 안내할 예정입니다. 클럽 위치와 추가 정보는 아래에서 확인하실 수 있습니다.</p>
+          </div>
+          <div class="pricing-next__actions">
+            <a class="button button--outline" href="visit.html">방문 안내 보기 <span aria-hidden="true">↗</span></a>
+            <a class="text-link text-link--light" href="https://www.yelp.com/biz/david-s-stone-golf-club-los-angeles?osq=David%E2%80%99s+Stone+Golf+Club" target="_blank" rel="noreferrer">Yelp에서 더 알아보기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="index.html" aria-label="데이빗 스톤 골프 클럽 홈">
+        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="20.5" stroke="currentColor" />
+          <path d="M13 29.5c5.4 0 8.6-2.7 11-8.5 2.4 5.8 5.6 8.5 11 8.5" stroke="currentColor" stroke-linecap="round" />
+          <path d="M24 13v15.5m0 0 5.2 7.5" stroke="currentColor" stroke-linecap="round" />
+          <circle cx="24" cy="12.5" r="2" fill="currentColor" />
+        </svg>
+        <span class="brand__wordmark">
+          <strong>데이빗 스톤 골프</strong>
+          <span>DAVID’S STONE GOLF CLUB</span>
+        </span>
+      </a>
+      <p>기본부터, 꾸준하게.</p>
+      <span class="site-footer__copyright">© DAVID’S STONE GOLF CLUB</span>
+    </footer>
+  </body>
+</html>
