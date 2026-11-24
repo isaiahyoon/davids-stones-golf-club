@@ -15,6 +15,16 @@ Open [http://localhost:8003](http://localhost:8003). Pages are available at
 JavaScript; no package installation or build step is required.
 Google Fonts and external links require an internet connection.
 
+## Tests
+
+Run the test suite with Node.js 20 or newer:
+
+```sh
+npm test
+```
+
+GitHub Actions runs the same test suite on pushes and pull requests.
+
 ## Pages
 
 - [Home](/)
