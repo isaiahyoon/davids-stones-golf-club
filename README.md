@@ -1,7 +1,6 @@
 # David's Stones Golf Club
 
-A Korean-first website concept for David's Stones Golf Club in Los Angeles.
-This is a draft for the owner's review, not a final published site.
+A Korean-first website for David's Stones Golf Club in Los Angeles.
 
 ## Run locally
 
