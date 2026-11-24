@@ -11,16 +11,17 @@ From the project directory, start a static server:
 python3 -m http.server 8003 --bind 127.0.0.1
 ```
 
-Open [http://localhost:8003](http://localhost:8003). The site uses static HTML,
-CSS, and JavaScript; no package installation or build step is required.
+Open [http://localhost:8003](http://localhost:8003). Pages are available at
+`/approach/`, `/lessons/`, and `/visit/`. The site uses static HTML, CSS, and
+JavaScript; no package installation or build step is required.
 Google Fonts and external links require an internet connection.
 
 ## Pages
 
-- [Home](index.html)
-- [Lesson philosophy](approach.html)
-- [Lessons and club fitting](lessons.html)
-- [Visit information](visit.html)
+- [Home](/)
+- [Lesson philosophy](/approach/)
+- [Lessons and club fitting](/lessons/)
+- [Visit information](/visit/)
 
 Confirm offerings, rates, contact information, and business hours with the
 owner before publishing.
