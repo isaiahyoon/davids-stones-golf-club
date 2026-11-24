@@ -149,6 +149,38 @@ test("all content images have alternative text", () => {
   }
 });
 
+test("link arrows are consistent decorative SVGs without changing link labels", () => {
+  const expectedLabels = {
+    "index.html": ["레슨 철학 알아보기", "클럽 방문 안내", "레슨 철학", "레슨 · 피팅", "찾아오시는 길"],
+    "approach/index.html": ["Yelp에서 남긴 레슨 후기"],
+    "visit/index.html": ["지도에서 위치 확인", "Yelp에서 더 알아보기"],
+    "lessons/index.html": [],
+  };
+  let arrowMarkup;
+
+  for (const page of pageDefinitions) {
+    const markup = readFile(page.file);
+    assert.doesNotMatch(markup, /↗/);
+    const links = [...markup.matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>/gi)]
+      .map(([, content]) => content)
+      .filter((content) => /class="link-arrow"/.test(content));
+    assert.deepEqual(
+      links.map((content) => content.replace(/<svg\b[\s\S]*?<\/svg>/, "").trim()),
+      expectedLabels[page.file],
+    );
+
+    for (const link of links) {
+      const svg = link.match(/<svg\b[\s\S]*?<\/svg>/)?.[0];
+      assert.ok(svg);
+      assert.match(svg, /aria-hidden="true"/);
+      assert.match(svg, /focusable="false"/);
+      assert.match(svg, /stroke="currentColor"/);
+      arrowMarkup ??= svg;
+      assert.equal(svg, arrowMarkup);
+    }
+  }
+});
+
 test("favicon is a scalable SVG using the site palette", () => {
   const favicon = readFile("assets/favicon.svg");
   assert.match(favicon, /<svg\b[^>]*viewBox="0 0 48 48"/);
