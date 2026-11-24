@@ -1,6 +1,6 @@
-# David's Stone Golf Club
+# David's Stones Golf Club
 
-A Korean-first website concept for David's Stone Golf Club in Los Angeles.
+A Korean-first website concept for David's Stones Golf Club in Los Angeles.
 This is a draft for the owner's review, not a final published site.
 
 ## Run locally
@@ -20,13 +20,10 @@ Google Fonts and external links require an internet connection.
 - [Home](index.html)
 - [Lesson philosophy](approach.html)
 - [Lessons and club fitting](lessons.html)
-- [Sample pricing](pricing.html)
 - [Visit information](visit.html)
 
-The prices, lesson duration, and fitting details on the pricing page are
-illustrative placeholders, not confirmed offerings or rates. Confirm these,
-along with contact information and business hours, with the owner before
-publishing.
+Confirm offerings, rates, contact information, and business hours with the
+owner before publishing.
 
 ## Copyright
 
