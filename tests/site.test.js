@@ -121,7 +121,8 @@ for (const page of pageDefinitions) {
       /rel="icon"/.test(tag),
     );
     assert.ok(favicon, `${page.file} declares a favicon`);
-    assert.equal(getAttribute(favicon, "href"), "/assets/favicon.svg");
+    assert.equal(getAttribute(favicon, "href"), "/assets/logo.png");
+    assert.equal(getAttribute(favicon, "type"), "image/png");
   });
 }
 
@@ -144,7 +145,10 @@ test("all local page references point to existing files", () => {
 test("all content images have alternative text", () => {
   for (const page of pageDefinitions) {
     for (const image of getTags(readFile(page.file), "img")) {
-      assert.ok(getAttribute(image, "alt")?.trim(), `${page.file} has an image without alt text`);
+      assert.notEqual(getAttribute(image, "alt"), undefined, `${page.file} has an image without alt text`);
+      if (getAttribute(image, "class") !== "brand__mark") {
+        assert.ok(getAttribute(image, "alt")?.trim(), `${page.file} has a content image without alt text`);
+      }
     }
   }
 });
@@ -181,11 +185,20 @@ test("link arrows are consistent decorative SVGs without changing link labels", 
   }
 });
 
-test("favicon is a scalable SVG using the site palette", () => {
-  const favicon = readFile("assets/favicon.svg");
-  assert.match(favicon, /<svg\b[^>]*viewBox="0 0 48 48"/);
-  assert.match(favicon, /#172720/i);
-  assert.match(favicon, /#c9ab72/i);
+test("every page uses the official logo in its header and footer", () => {
+  for (const page of pageDefinitions) {
+    const markup = readFile(page.file);
+    for (const section of ["header", "footer"]) {
+      const content = markup.match(new RegExp(`<${section}\\b[\\s\\S]*?<\\/${section}>`, "i"))?.[0];
+      assert.ok(content, `${page.file} has a ${section}`);
+      const logo = getTags(content, "img").find((tag) => getAttribute(tag, "class") === "brand__mark");
+      assert.ok(logo, `${page.file} has a logo in its ${section}`);
+      assert.equal(getAttribute(logo, "src"), "/assets/logo.png");
+      assert.equal(getAttribute(logo, "alt"), "");
+      assert.equal(getAttribute(logo, "width"), getAttribute(logo, "height"));
+      assert.match(content, /<a\b[^>]*class="brand(?: brand--footer)?"[^>]*aria-label="[^"]+"/);
+    }
+  }
 });
 
 test("mobile navigation styles match the menu interaction", () => {
