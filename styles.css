@@ -110,7 +110,8 @@ button {
   width: 42px;
   height: 42px;
   flex: 0 0 auto;
-  color: var(--gold);
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .brand__wordmark {
